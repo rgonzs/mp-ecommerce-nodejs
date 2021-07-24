@@ -100,7 +100,7 @@ app.post('/webhook', (req, res)=>{
     console.log('----------QUERY----------')
     console.log(req.query)
     console.log('----------BODY----------')
-    console.log(req.body)
+    console.log(req)
     res.status(200).json({})
 })
 
