@@ -1,12 +1,12 @@
 var express = require('express');
-var exphbs = require('express-handlebars');
 var { json } = require('express');
+var exphbs = require('express-handlebars');
 var mercadopago = require('mercadopago');
 var port = process.env.PORT || 3000;
 
 var app = express();
-app.use(json())
 
+app.use(json())
 
 mercadopago.configure({
 	access_token: process.env.ACCESS_TOKEN_MP,
@@ -99,12 +99,12 @@ app.get('/failure', (req, res) => {
 	res.render('failure', req.query);
 });
 
-app.post('/webhook', (req, res)=>{
-    console.log('----------QUERY----------')
-    console.log(req.query)
-    console.log('----------BODY----------')
-    console.log(req.body)
-    res.status(200).json({})
-})
+app.post('/webhook', (req, res) => {
+	console.log('----------QUERY----------');
+	console.log(req.query);
+	console.log('----------BODY----------');
+	console.log(req.body);
+	res.status(200).json({});
+});
 
 app.listen(port);
