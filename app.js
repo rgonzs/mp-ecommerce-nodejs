@@ -59,8 +59,8 @@ app.get('/detail', async function (req, res) {
 		{
 			id: 1234,
 			title: title,
-			description: 'Dispositivo móvil de Tienda e-commerce',
-			picture_url: `${req.get('host')}${img.slice(1)}`,
+			description: 'Dispositivo movil de Tienda e-commerce',
+			picture_url: `https://${req.get('host')}${img.slice(1)}`,
 			quantity: +unit,
 			unit_price: Number(price),
 		},
